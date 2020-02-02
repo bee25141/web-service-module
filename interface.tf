@@ -28,9 +28,15 @@ variable "vpc_id" {
 }
 
 variable "public_subnet_ids" {
+  type = list(string)
+  default     = []
+  description = "The list of public subnets to populate."
+}
 
-    type = list(string)
-  
+variable "private_subnet_ids" {
+  type = list(string)
+  default     = []
+  description = "The list of private subnets to populate."
 }
 
 variable "domain" {
